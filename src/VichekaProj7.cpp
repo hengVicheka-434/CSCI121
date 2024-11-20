@@ -89,7 +89,7 @@ void menu(){
 }
 
 void fill_array(int arr[], int size){
-  if (size >= sizeOf(arr)){
+  if (size >= (sizeof(arr) / sizeof(arr[0])){
 	cout << "Enter your sequence of values into the array: ";
     for (int i = 0; i<size; i++){
 	cin >> arr[i];
@@ -101,7 +101,7 @@ void fill_array(int arr[], int size){
 // pre-condition: The arr has actual size that is greater than or equal to size
 // post-condition: arr[0], ..., arr[size-1] is filled from keyboard
 void print_array(int arr[], int size){
-  if (size >= sizeOf(arr)){
+  if (size >= (sizeof(arr) / sizeof(arr[0])){
     for (int i = 0; i<size; i++){
 			cout << arr[i] << "\t";
 			if (i % 5 == 0)
@@ -123,7 +123,7 @@ int linear_search(int arr[], int size, int key){
 		if ( index > size-1 )
 			return -1;
 		else 
-			return arr[index];
+			return index;
 	} 
 }
 // pre-condition: arr has given size
