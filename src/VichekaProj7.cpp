@@ -1,19 +1,14 @@
 void fill_array(int arr[], int size);
-// pre-condition: The arr has actual size that is greater than or equal to
-size
+// pre-condition: The arr has actual size that is greater than or equal to size
 // post-condition: arr[0], ..., arr[size-1] is filled from keyboard
 void print_array(int arr[], int size);
-// pre-condition: The arr has actual size that is greater than or equal to
-size
-// post-condition: arr[0], ..., arr[size-1] is printed to screen with 5
-elements per line
+// pre-condition: The arr has actual size that is greater than or equal to size
+// post-condition: arr[0], ..., arr[size-1] is printed to screen with 5 elements per line
 int linear_search(int arr[], int size, int key);
 // pre-condition: arr has given size
-// post-condition: The index of first occurrence of key in arr is returned. If
-the key cannot be found in arr, -1 is returned
+// post-condition: The index of first occurrence of key in arr is returned. If the key cannot be found in arr, -1 is returned
 void select_sort(int arr[], int size);
-// pre-condition: arr has given size
-Of course, a menu function is needed. The main function will look like following:
+// pre-condition: arr has given size 
 // post-condition: the elements in arr are rearranged from least to largest
 void insert_sort(int arr[], int size);
 // pre-condition: arr has given size
@@ -40,8 +35,7 @@ int main() {
         if(index == -1)
           cout << "The key " << key << " is not in array\n";
         else
-          cout << "The key " << key << " is #" << (index + 1) << "
-          element in array\n";
+          cout << "The key " << key << " is #" << (index + 1) << "element in array\n";
           break;
       }
       case 2:
@@ -82,3 +76,35 @@ int main() {
   }while(choice != 5);
   return 0;
 }
+
+// functions implementation
+void fill_array(int arr[], int size){
+  
+}
+// pre-condition: The arr has actual size that is greater than or equal to size
+// post-condition: arr[0], ..., arr[size-1] is filled from keyboard
+void print_array(int arr[], int size){
+  
+}
+// pre-condition: The arr has actual size that is greater than or equal to size
+// post-condition: arr[0], ..., arr[size-1] is printed to screen with 5 elements per line
+int linear_search(int arr[], int size, int key){
+  
+}
+// pre-condition: arr has given size
+// post-condition: The index of first occurrence of key in arr is returned. If the key cannot be found in arr, -1 is returned
+void select_sort(int arr[], int size){
+  
+}
+// pre-condition: arr has given size 
+// post-condition: the elements in arr are rearranged from least to largest
+void insert_sort(int arr[], int size){
+  
+}
+// pre-condition: arr has given size
+// post-condition: the elements in arr are rearranged from least to largest
+void bubble_sort(int arr[], int size){
+  
+}
+// pre-condition: arr has given size
+// post-condition: the elements in arr are rearranged from least to largest
