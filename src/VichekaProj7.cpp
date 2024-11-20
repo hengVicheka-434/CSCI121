@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 void menu();
 
 void fill_array(int arr[], int size);
@@ -86,7 +89,7 @@ void menu(){
 }
 
 void fill_array(int arr[], int size){
-  if (size >= sizeOf(arr){
+  if (size >= sizeOf(arr)){
 	cout << "Enter your sequence of values into the array: ";
     for (int i = 0; i<size; i++){
 	cin >> arr[i];
@@ -98,7 +101,7 @@ void fill_array(int arr[], int size){
 // pre-condition: The arr has actual size that is greater than or equal to size
 // post-condition: arr[0], ..., arr[size-1] is filled from keyboard
 void print_array(int arr[], int size){
-  if (size >= sizeOf(arr){
+  if (size >= sizeOf(arr)){
     for (int i = 0; i<size; i++){
 			cout << arr[i] << "\t";
 			if (i % 5 == 0)
