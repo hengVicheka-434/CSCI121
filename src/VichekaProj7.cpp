@@ -82,17 +82,17 @@ int main() {
 
 // functions implementation
 void menu(){
-	cout << "
+	
 }
 
 void fill_array(int arr[], int size){
   if (size >= sizeOf(arr){
-		cout << "Enter your sequence of values into the array: ";
+	cout << "Enter your sequence of values into the array: ";
     for (int i = 0; i<size; i++){
-			cin >> arr[i];
-		}
+	cin >> arr[i];
+    }
   } else {
-		return;
+	return;
 	}
 }
 // pre-condition: The arr has actual size that is greater than or equal to size
