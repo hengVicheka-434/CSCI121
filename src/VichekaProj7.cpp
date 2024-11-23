@@ -41,7 +41,7 @@ int main() {
         if(index == -1)
           cout << "The key " << key << " is not in array\n";
         else
-          cout << "The key " << key << " is #" << (index + 1) << "element in array\n";
+          cout << "The key " << key << " is #" << (index + 1) << " element in array\n";
           break;
       }
       case 2:
@@ -85,49 +85,40 @@ int main() {
 
 // functions implementation
 void menu(){
-	
+    cout << "**********************************************\n";
+	  cout << "** Menu Options:                            **\n";
+    cout << "** 1. Fill Array and Perform Linear Search  **\n";
+    cout << "** 2. Fill Array and Perform Selection Sort **\n";
+    cout << "** 3. Fill Array and Perform Insertion Sort **\n";
+    cout << "** 4. Fill Array and Perform Bubble Sort    **\n";
+    cout << "** 5. Exit                                  **\n";
+    cout << "**********************************************\n";
 }
 
 void fill_array(int arr[], int size){
-  if (size >= (sizeof(arr) / sizeof(arr[0])){
-	cout << "Enter your sequence of values into the array: ";
-    for (int i = 0; i<size; i++){
-	cin >> arr[i];
-    }
-  } else {
-	return;
-	}
+    cout << "Enter your sequence of values into the arra: ";
+    for (int i = 0; i<size; i++)
+      cin >> arr[i];
 }
-// pre-condition: The arr has actual size that is greater than or equal to size
-// post-condition: arr[0], ..., arr[size-1] is filled from keyboard
+
 void print_array(int arr[], int size){
-  if (size >= (sizeof(arr) / sizeof(arr[0])){
-    for (int i = 0; i<size; i++){
-			cout << arr[i] << "\t";
-			if (i % 5 == 0)
-				cout << endl;
-		}
-  } else {
-		return;
-	}
+  for (int i = 0; i<size; i++){
+	cout << arr[i] << "\t";
+	if (i % 4 == 0 && i != 0)
+		cout << endl;
+  }
+  cout << endl;
 }
-// pre-condition: The arr has actual size that is greater than or equal to size
-// post-condition: arr[0], ..., arr[size-1] is printed to screen with 5 elements per line
+
 int linear_search(int arr[], int size, int key){
-	int index;
-  if (size>0){
-		for (int i = 0; i<size; i++){
-			if (arr[i]==key)
-				index = i;
-		}
-		if ( index > size-1 )
-			return -1;
-		else 
-			return index;
-	} 
+	for (int i = 0; i < size; i++) {
+    if (arr[i] == key) {
+      return i; 
+    }
+  }
+  return -1; 
 }
-// pre-condition: arr has given size
-// post-condition: The index of first occurrence of key in arr is returned. If the key cannot be found in arr, -1 is returned
+
 void select_sort(int arr[], int size){
 	if (size > 0){
 		for (int i = 0; i < size - 1; i++) {
@@ -142,40 +133,35 @@ void select_sort(int arr[], int size){
 	} else 
 		return;
 }
-// pre-condition: arr has given size 
-// post-condition: the elements in arr are rearranged from least to largest
-void insert_sort(int arr[], int size){
-  if (size > 0){
-		for (int i = 1; i < size - 1; i++) {
-			int key = arr[i];
-			int j = i-1;
 
-			while (j>=0 && arr[j]>key){
-				arr[j+1] = arr[j];
-				j--;
-			}
+void insert_sort(int arr[], int size){
+if (size > 0){
+    for (int i = 1; i < size; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
     }
-		arr[j+1] = key; 
-	} else 
-		return;
+} else 
+        return;
 }
-// pre-condition: arr has given size
-// post-condition: the elements in arr are rearranged from least to largest
+
 void bubble_sort(int arr[], int size){
   if (size > 0){
-		for (int i = 1; i < size - 1; i++) {
-			bool swapped = false;
-			for (int j = 0; j < size; j++){
-				if (arr[j] > arr[j+1]){
-					swap(arr[j], arr[j+1]);
-					swapped = true;
-				}
-			}
-			if (!swapped)
-				break;
+    for (int i = 1; i < size - 1; i++) {
+      bool swapped = false;
+      for (int j = 0; j < size; j++){
+        if (arr[j] > arr[j+1]){
+          swap(arr[j], arr[j+1]);
+          swapped = true;
+        }
+      }
+      if (!swapped)
+        break;
     }
-	} else 
-		return;
+  } else 
+    return;
 }
-// pre-condition: arr has given size
-// post-condition: the elements in arr are rearranged from least to largest
